@@ -1,0 +1,133 @@
+:root {
+  --grid-rows: 1;
+  --grid-cols: 1;
+}
+
+body {
+  background-color: #f8f7f2;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 5px;
+  font-weight: normal;
+  background: linear-gradient(
+    to right,
+    #d81010,
+    #e590ad,
+    #7e57c2,
+    #2196f3,
+    #26c6da,
+    #43a047,
+    #eeff41,
+    #f9a825,
+    #ff5722
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+button {
+  display: block;
+  text-align: center;
+  margin: 1em;
+  width: 7em;
+  height: 2.2em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  position: relative;
+  left: 10px;
+}
+
+/** Container holding everything */
+#bigContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/** Container holding color picker, buttons, and slider */
+#btnContainer {
+  display: flex;
+  flex-direction: column;
+  margin: auto 3rem auto auto;
+  text-align: center;
+}
+
+/** Container holding grid easel */
+#container {
+  display: grid;
+  height: 720px;
+  width: 720px;
+  grid-template-rows: repeat(var(--grid-rows), auto);
+  grid-template-columns: repeat(var(--grid-cols), auto);
+  border: 1px;
+  border-style: inset;
+  border-color: black;
+  background-color: white;
+}
+
+/** Container holding title and grid */
+#verticalContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-right: auto;
+  margin-left: 2rem;
+  padding-right: 7rem;
+}
+
+/* Make color picker circular */
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  position: relative;
+  top: 15px;
+  left: 5px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  height: 5px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  margin-top: 20px;
+}
+
+.slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  background: black;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#gridSize {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  font-size: smaller;
+  color: #626666;
+}

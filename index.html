@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Etch-A-Sketch</title>
+  </head>
+  <body>
+    <div id="bigContainer">
+      <div id="btnContainer">
+        <input type="color" id="colorPicker" name="colorPicker" /><br /><br />
+        <button id="rgbBtn">Prettify</button>
+        <button id="gridLinesBtn">Grid Lines</button>
+        <button id="eraseBtn">Eraser</button>
+        <button id="clearBtn">Clear</button>
+        <input
+          type="range"
+          class="slider"
+          id="sizeSlider"
+          min="1"
+          max="100"
+          value="16"
+        />
+        <!-- initial size displayed which gets updated by js-->
+        <label for="sizeSlider"><span id="gridSize">16 × 16</span></label>
+      </div>
+
+      <div id="verticalContainer">
+        <h1>ETCH-A-SKETCH</h1>
+        <!-- container to hold grid-->
+        <div id="container"></div>
+      </div>
+    </div>
+
+    <!-- Your JavaScript goes here! -->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
